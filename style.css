@@ -1,0 +1,138 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+  text-shadow: 1px 2px grey;
+  font-size:40px;
+  font-weight: bold;
+}
+
+h2{
+    font-size:35px;
+}
+
+body {
+  font-size: 20px;
+  font-family:'Roboto', sans-serif;
+  background-color: whitesmoke;
+}
+
+header nav {
+	background-color:indianred;
+    position: fixed;
+    width: 100%;
+    border-top: 5px solid #555;
+    border-bottom: 5px solid #555;
+}
+
+header nav ul {
+	text-align: center;
+	padding: 5px 0; 
+}
+
+header nav ul li {
+	display: inline-block;
+	margin: 15px; 
+}
+
+header nav ul li a {
+	text-decoration: none;
+	color: #000000;
+	font-weight: bold;
+	text-transform: uppercase;
+    font-family: "Lucida Console", Monaco, monospace
+}
+
+header nav ul li a:hover {
+  border-bottom: 3px solid;
+  padding-bottom: 3px;
+  color: whitesmoke;
+}
+    
+#summary{
+	height: 700px;
+	padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 100px;
+    text-align: center;
+    border-bottom: 5px solid #555;
+}
+#asset-list{
+	height: 1300px;
+	padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 75px;
+    text-align: center;
+    border-bottom: 5px solid #555;
+}
+
+#product-purpose {
+	height: 1300px;
+	padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 50px;
+    text-align: center;
+    border-bottom: 5px solid #555;
+}
+
+#complex-components{
+    height: 850px;
+	padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 75px;
+    text-align: center;
+    border-bottom: 5px solid #555;
+}
+
+#user-stories{
+    height: 1100px;
+	padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 75px;
+    text-align: center;
+    border-bottom: 5px solid #555;
+}
+
+#ux-ui{
+    height: 3050px;
+	padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 75px;
+    text-align: center;
+    border-bottom: 5px solid #555;
+}
+
+
+
+
+#functionality{
+    height: 2050px;
+	padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 75px;
+    text-align: center;
+    border-bottom: 5px solid #555;
+}
+
+
+section div h1 {
+	text-align: center;
+  }
+
+
+img {
+  max-width: 100%;
+  height: auto;
+  align-content: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+
+
+
+

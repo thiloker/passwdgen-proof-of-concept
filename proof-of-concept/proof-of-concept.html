@@ -1,0 +1,122 @@
+<html>
+    <head>
+        <title>SIT120 Proof of Concept - 218454252</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>      
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+        
+<div id="main">
+    <ul>
+  <nav v-bind:class="active" v-on:click.prevent>
+    <a href="#" class="home" v-on:click="makeActive('home')">Home</a>
+    <a href="#" class="tips" v-on:click="makeActive('tips')">Tips and Tricks</a>
+    <a href="#" class="about" v-on:click="makeActive('about')">About Us</a>
+    <a href="#" class="contact" v-on:click="makeActive('contact')">Contact Us</a>
+  </nav>
+  </ul>
+    <br><br>
+  <p>You chose <b>{{ active }}</b></p><br><br>
+</div>
+            
+<div>This is gonna be our Dynamic Component. Click Generate or Check Button to change components.</div><br><br>
+
+<div id="app" class="container">
+  <div>
+   <div class="buttons">
+     <button style="height:50px;width:100px" v-for="tab in tabs" class="btn" @click="changeComponent(tab)">{{ tab }}</button>
+    </div>
+     <template>
+      <div class="main">
+        <component :is="selectedComponent"></component>
+      </div>
+    </template>
+  </div>
+</div>
+
+
+        
+        </header>
+    <script>
+var demo = new Vue({
+  el: '#main',
+  data: {
+  	active: 'home'
+  },
+  methods: {
+  	makeActive: function(item){
+    	this.active = item;
+    }
+  }
+})
+        
+        
+Vue.component('Generate-component', {
+data: function () {
+    return {
+      }
+  }, 
+  template: 
+  `<div>
+  <br>
+  <h2>PASSWORD GENERATOR</h2>
+  <br>
+  
+  <form class ="form">
+  	Password
+  	<input type="text"  name="Password" value="Click to Copy">
+  	<br>
+ 	 	<br>
+  	<button style="height:50px;width:100px">Generate</button><br><br>
+  	<h3>Strength Bar</h3><br>
+  	<h3>User Criteria</h3><br>
+	</form>
+   </div>`
+})
+Vue.component('Check-component', {
+data: function () {
+    return {
+      }
+  },
+  template: 
+  `<div>
+  <br>
+  <h2>PASSWORD CHECKER</h2><br>
+  <form class ="form">
+  Password
+  <input type="text"  name="check" value="Paste Password to Check">
+  <br>
+  <br>
+  <button style="height:50px;width:100px">Check</button><br><br>
+  <h3>Strength Bar</h3><br><BR><BR><br>
+	</form> 
+   </div>`
+})
+
+
+new Vue({
+    el: '#app',
+  data: {
+    tabs : ['Generate', 'Check'],
+    selectedComponent: 'Generate-component',
+  },
+  methods : {
+    changeComponent : function(name){
+      name = name || 'generate'; 
+      this.selectedComponent = `${name}-component`
+    }
+  }
+});
+        </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    </body>
+    
+</html>
